@@ -35,7 +35,8 @@ int main(){
     q.rear=-1;
     printf("Enter the size of Queue:\n");
     scanf("%d",&q.size);
-    q.Q=malloc(sizeof(struct Queue));
+    q.Q=calloc(q.size,sizeof(int));
+
     Enqueue(&q,5);
     Enqueue(&q,10);
     printf("%d",Dequeue(&q));
