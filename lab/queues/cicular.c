@@ -32,6 +32,8 @@ int Dequeue(struct Queue *q){
 
 int main(){
     struct Queue q;
+    q.front=0;
+    q.rear=0;
     printf("Enter the size of queue:\n");
     scanf("%d",&q.size);
     q.Q=calloc(q.size,sizeof(int));
