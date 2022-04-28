@@ -132,21 +132,23 @@ struct node *delete(struct node *p,int key){
     }
     struct node *q=NULL;
     if(key<p->data){
-        p->lchild=delete(p->lchild,p->data);
+        p->lchild=delete(p->lchild,key);
     }
     else if(key>p->data){
-        p->rchild=delete(p->rchild,p->data);
+        p->rchild=delete(p->rchild,key);
     }
     else{
         if(height(p->lchild)>height(p->rchild)){
             q=Inpre(p->lchild);
             p->data=q->data;
-            free(q);
+            p->lchild=delete(p->lchild,q->data);
+
         }
         else{
             q=Insuc(p->rchild);
             p->data=q->data;
-            free(q);
+            p->rchild=delete(p->rchild,q->data);
+
         }
     }
     return p;
@@ -174,6 +176,8 @@ int main(){
     root=rinsert(root,25);
     rinsert(root,14);
     rinsert(root,40);
-    delete(root,14);
+    rinsert(root,35);
+
+    delete(root,40);
     inorder(root);
 }

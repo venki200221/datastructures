@@ -126,10 +126,10 @@ struct node *Delete(struct node *p,int key){
     }
     struct node *q=NULL;
     if(key<p->data){
-        p->lchild=Delete(p->lchild,p->data);
+        p->lchild=Delete(p->lchild,key);
     }
     else if(key>p->data){
-        p->rchild=Delete(p->rchild,p->data);
+        p->rchild=Delete(p->rchild,key);
     }
     else{
         if(Height(p->lchild)>Height(p->rchild)){
@@ -197,7 +197,7 @@ int main(){
     rinsert(root,15);
     rinsert(root,35);
     printf("%d\n",count(root));
-    Delete(root,35);
+    Delete(root,25);
     // printf("%s",search(15));
     Inorder(root);
     // Preorder(root);
