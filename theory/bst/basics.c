@@ -63,13 +63,13 @@ struct node *search(int key){
     struct node *t=root;
     while(t){
         if(key<t->data){
-        return t->lchild;
+        t= t->lchild;
     }
     else if(key>t->data){
-        return t->rchild;
+        t= t->rchild;
     }
     else if(key == t->data){
-        return t;
+        t= t;
     }
     }
     return NULL;
