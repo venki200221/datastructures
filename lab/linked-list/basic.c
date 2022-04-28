@@ -286,7 +286,7 @@ void reverse2(struct node *p){
     first=q;
 }
 
-void reverse3(struct node *p,struct node *q){
+void reverse3(struct node *q,struct node *p){
     if(p){
         reverse3(p,p->next);
         p->next=q;

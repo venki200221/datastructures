@@ -66,6 +66,9 @@ scanf("%d",&size);
 arr[size]=0;
 enqueuerear(10);
 enqueuerear(20);
+enqueuerear(30);
+enqueuerear(40);
+
 display();
 dequeuefront();
 dequeuefront();
@@ -73,7 +76,7 @@ dequeuefront();
 printf("----------------\n");
 enqueuefront(40);
 enqueuefront(50);
-// dequeuerear();
+dequeuerear();
 display();
 
 }
