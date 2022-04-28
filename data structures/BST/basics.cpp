@@ -189,6 +189,7 @@ int main()
     rinsert(root, 10);
     rinsert(root, 20);
     rinsert(root, 25);
+    Delete(root,25);
     Inorder(root);
 
     temp = search(20);

@@ -338,7 +338,7 @@ void Merge(struct node *p,struct node *q){
     else{
         last->next=q;
     }
-    display(first);
+    display(third);
 }
 
 int main(){
