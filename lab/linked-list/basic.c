@@ -61,6 +61,7 @@ void display(struct node *p){
 }
 
 void insert(struct node *p,int pos,int key){
+    
     struct node *t;
     if(first==NULL){
         t=malloc(sizeof(struct node));
